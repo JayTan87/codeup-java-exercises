@@ -1,15 +1,15 @@
 import java.util.Scanner;
-import static java.lang.Integer.parseInt;
+
 
 public class ConsoleExercises {
     public static void main(String[] args) {
 
-        double pi = 3.14159;
-        System.out.format("The value of pi is approximately %.2f",pi);
-        Scanner scanner0 = new Scanner(System.in);
-
-        System.out.println("Please enter a number");
-        int userInput = scanner0.nextInt();
+//        double pi = 3.14159;
+//        System.out.format("The value of pi is approximately %.2f.\n",pi);
+//        Scanner scanner0 = new Scanner(System.in);
+//
+//        System.out.println("Please enter a number");
+//        int userInput = scanner0.nextInt();
 
 
 //        Scanner scanner1 = new Scanner(System.in);
@@ -35,8 +35,8 @@ public class ConsoleExercises {
         String userDimension1 = scanner3.nextLine();
         System.out.println("Please the second number");
         String userDimension2 = scanner3.nextLine();
-        int userValue1 = parseInt(userDimension1);
-        int userValue2 = parseInt(userDimension2);
+        int userValue1 = Integer.parseInt(userDimension1);
+        int userValue2 = Integer.parseInt(userDimension2);
         System.out.println(userValue1 * userValue2);
         System.out.println((userValue1* 2) + (userValue2 * 2));
     }
