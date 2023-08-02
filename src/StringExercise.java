@@ -12,4 +12,6 @@ public class StringExercise {
         System.out.println(messageFour);
         System.out.println(messageFive);
     }
+
 }
+
