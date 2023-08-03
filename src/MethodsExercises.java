@@ -54,29 +54,56 @@ public class MethodsExercises {
         for (int i = 1; i <= userInput; i++) {
             count = count * i;
             for (int num = i; num <= i; num++) {
-                if(multi.equals("")){
+                if (multi.equals("")) {
                     multi += num;
-                }
-                else
-                multi += operator + num;
+                } else
+                    multi += operator + num;
             }
             System.out.printf("%s %s %-20s %s %d%n", i, sentence, multi, equals, count);
-            }
-////
         }
+////
+    }
+
+    public static void diceGame() {
+        String userConfirm;
+        Scanner scan2 = new Scanner(System.in);
+        System.out.println("Please enter the number of sides for your dice.");
+        int userInput = scan2.nextInt();
+        do {
+            int max = userInput;
+            int min = 1;
+            int range = max - min + 1;
+            int rand1 = (int) (Math.random() * range) + min;
+            int rand2 = (int) (Math.random() * range) + min;
+            System.out.println("Your first roll is: " + rand1);
+            System.out.println("Your second roll is: " + rand2);
+            System.out.println("Would you like to continue? (Y/N)");
+            userConfirm = scan2.next();
+            if (userConfirm.equals("Y")) {
+            }
+            System.out.println("Please enter the number of sides for your dice.");
+            userInput = scan2.nextInt();
+        }
+            while (userConfirm.equalsIgnoreCase("Y")) ;
+        }
+
 
 ////
 ////        while();
 //    }
 
-    public static void main(String[] args) {
-        System.out.println(addition(4, 5));
-        System.out.println(subtraction(4, 5));
-        System.out.println(multiplication(4, 5));
-        System.out.println(division(4, 5));
-        System.out.println(modulus(4, 5));
+        public static void main (String[]args){
+            Scanner scanner = new Scanner(System.in);
+//        System.out.println(addition(4, 5));
+//        System.out.println(subtraction(4, 5));
+//        System.out.println(multiplication(4, 5));
+//        System.out.println(division(4, 5));
+//        System.out.println(modulus(4, 5));
 //        getInteger(1, 10);
-        factorial();
+//        factorial();
+//            System.out.println("Please enter the number of sides for your dice.");
+//            int userInput = scanner.nextInt();
+            diceGame();
+        }
     }
-}
 
