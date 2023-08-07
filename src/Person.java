@@ -11,7 +11,7 @@ class Person {
         name = passedName;
     }
     public String getName() {
-        return name;
+        return this.name;
     }
     public void setName(String newName)   {
         name = newName;

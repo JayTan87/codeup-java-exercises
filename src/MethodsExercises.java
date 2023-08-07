@@ -34,14 +34,13 @@ public class MethodsExercises {
             return value;
         } else {
             System.out.println("Please enter a number within the range:");
-//            value = scanner.nextInt();
             getInteger(min, max);
         }
         return value;
     }
 
     public static void factorial() {
-//        do {
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a number to see its factorial");
         int userInput = scanner.nextInt();
@@ -61,7 +60,7 @@ public class MethodsExercises {
             }
             System.out.printf("%s %s %-20s %s %d%n", i, sentence, multi, equals, count);
         }
-////
+
     }
 
     public static void diceGame() {
