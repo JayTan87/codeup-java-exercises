@@ -1,4 +1,5 @@
 package movies;
+
 import util.Input;
 
 import java.util.Arrays;
@@ -9,13 +10,14 @@ public class MoviesApplication {
     public static Movie[] addMovie(Movie[] movies, Movie element) {
 
         Movie[] movieCollection = Arrays.copyOf(findAll(), findAll().length + 1);
-        for (int i = 0; i < findAll().length-1; i++) {
+        for (int i = 0; i < findAll().length - 1; i++) {
             if (element.getCategory().equals("animated")) {
                 movieCollection[i] = element;
             }
         }
         return movieCollection;
     }
+
     public static void main(String[] args) {
         Input inputScan = new Input();
         System.out.println("How would you like to view Movies?");
@@ -34,16 +36,43 @@ public class MoviesApplication {
                 System.out.println(element.getCategory());
             }
         } else if (userInput == 2) {
-            for(Movie element : findAll()) {
-//                addMovie(findAll(), element.getCategory());
+            Movie[] animatedMovies = new Movie[3];
+            for (Movie element : findAll()) {
+                int i = 0;
+                if (element.getCategory().equals("animated")) {
+                    animatedMovies[i] = element;
+                    System.out.println(element.getCategory("animated") + "\n" + element.getCategory());
+                    i++;
+                }
             }
-//            Movie[] animatedMovies = new Movie[0];
-//            for (Movie element : findAll()) {
-//                int i = 0;
-//                if (element.getCategory().equals("animated")) {
-//                    animatedMovies[element] = element.getName();
-//                    System.out.println(element.getCategory("animated"));
-//                    i++;
+        } else if (userInput == 3) {
+            Movie[] animatedMovies = new Movie[3];
+            for (Movie element : findAll()) {
+                int i = 0;
+                if (element.getCategory().equals("drama")) {
+                    animatedMovies[i] = element;
+                    System.out.println(element.getCategory("drama") + "\n" + element.getCategory());
+                    i++;
+                }
+            }
+        } else if (userInput == 4) {
+            Movie[] animatedMovies = new Movie[3];
+            for (Movie element : findAll()) {
+                int i = 0;
+                if (element.getCategory().equals("horror")) {
+                    animatedMovies[i] = element;
+                    System.out.println(element.getCategory("horror") + "\n" + element.getCategory());
+                    i++;
+                }
+            }
+        } else if (userInput == 5) {
+            Movie[] animatedMovies = new Movie[3];
+            for (Movie element : findAll()) {
+                int i = 0;
+                if (element.getCategory().equals("scifi")) {
+                    animatedMovies[i] = element;
+                    System.out.println(element.getCategory("scifi") + "\n" + element.getCategory());
+                    i++;
                 }
             }
         }

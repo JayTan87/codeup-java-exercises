@@ -12,12 +12,12 @@ public class Circle {
     }
 
     public double getArea() {
-    double area = (Math.PI *(Math.pow(radius, 2.0)));
+    double area = (Math.PI *(Math.pow(this.radius, 2.0)));
     return area;
     }
 
     public double getCircumference(){
-    double circumference = (2 * Math.PI * radius);
+    double circumference = (2 * Math.PI * this.radius);
     return circumference;
     }
 }
