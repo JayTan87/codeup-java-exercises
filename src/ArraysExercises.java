@@ -1,10 +1,10 @@
 import java.util.Arrays;
 
 public class ArraysExercises {
-    public static Person[] addPerson(Person[] people) {
+    public static Person[] addPerson(Person[] people, Person personToAdd) {
 
-        Person[] newPeople = Arrays.copyOf(people, 4);
-        newPeople[3] = new Person("Mary");
+        Person[] newPeople = Arrays.copyOf(people, people.length + 1);
+        newPeople[newPeople.length - 1] = personToAdd;
         for(int i = 0; i < 4; i++) {
             System.out.println(newPeople[i].getName());
         }
@@ -13,11 +13,8 @@ public class ArraysExercises {
     public static void main(String[] args) {
 
         Person[] people = {new Person("Jeremy"), new Person("Bob"), new Person("Bill")};
-        addPerson(people);
-//        System.out.println(newPeople[0].getName());
-//        for (Person person : people){
-//            System.out.println(this.getName());
-//        }
+        addPerson(people, new Person("Mary"));
+//
     }
 
 }
