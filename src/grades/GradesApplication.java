@@ -40,16 +40,16 @@ public class GradesApplication {
         System.out.println("Which student would you like more information about?");
         String userInput = input.getString();
             if (userInput.equalsIgnoreCase("bobber")) {
-                System.out.println("Name: " + bob.getName() + " GitHub Username: " + bob.getName());
+                System.out.println("Name: " + bob.getName() + " GitHub Username: Bobber");
                 System.out.println("Current Average: " + bob.getGradeAverage());
             } else if (userInput.equalsIgnoreCase("joe-code")) {
-                System.out.println("Name: " + joe.getName() + " GitHub Username: " + joe.getName());
+                System.out.println("Name: " + joe.getName() + " GitHub Username: Joe-Code");
                 System.out.println("Current Average: " + joe.getGradeAverage());
             } else if (userInput.equalsIgnoreCase("jaytan")) {
-                System.out.println("Name: " + jeremy.getName() + " GitHub Username: " + jeremy.getName());
+                System.out.println("Name: " + jeremy.getName() + " GitHub Username: JayTan");
                 System.out.println("Current Average: " + jeremy.getGradeAverage());
             } else if (userInput.equalsIgnoreCase("dan-bug")) {
-                System.out.println("Name: " + dan.getName() + " GitHub Username: " + dan.getName());
+                System.out.println("Name: " + dan.getName() + " GitHub Username: Dan-Bug");
                 System.out.println("Current Average: " + dan.getGradeAverage());
             }
             else {
